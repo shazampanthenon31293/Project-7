@@ -1,5 +1,6 @@
 table {
     border-collapse: collapse;
+    line-height: .75;
 }
   
 table, th, td {
