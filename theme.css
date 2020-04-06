@@ -9,3 +9,21 @@ table, th, td {
 a:link,a:visited{
     color: blue;
 }
+p{
+    list-style: .8;
+}
+td.solidrepublican{
+    background-color: #fc1703;;
+}
+td.soliddemocrat{
+    background-color: #5493ff;
+}
+td.leandemocrat{
+    background-color: #B0CEFF;
+}
+td.leanrepublican{
+    background-color: #ff8a8a;
+}
+td.even{
+    background-color: #ded8d1;
+}
