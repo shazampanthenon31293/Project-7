@@ -9,6 +9,9 @@ function s1(){
         //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
+    $.get("https://ipinfo.io", function(response) {
+        console.log(response.city, response.country);
+    }, "jsonp");
     var s1 = guid()
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
