@@ -9,9 +9,19 @@ function s1(){
         //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
-    $.get("https://api.ipdata.co?api-key=test", function(response) {
-    console.log(response.country_name);
-}, "jsonp");
+    var request = new XMLHttpRequest();
+
+    request.open('GET', 'https://api.ipdata.co/?api-key=test');
+    
+    request.setRequestHeader('Accept', 'application/json');
+    
+    request.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+      }
+    };
+    
+    request.send();
     var s1 = guid()
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
