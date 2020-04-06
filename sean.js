@@ -9,12 +9,9 @@ function s1(){
         //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
-    $ 
-    if (navigator.geolocation) { //check if geolocation is available
-                    navigator.geolocation.getCurrentPosition(function(position){
-                      console.log(position);
-                    });   
-                }
+    $.get("https://api.ipdata.co?api-key=test", function(response) {
+    console.log(response.country_name);
+}, "jsonp");
     var s1 = guid()
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
