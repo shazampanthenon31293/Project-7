@@ -12,18 +12,18 @@ a:link,a:visited{
 p{
     list-style: .8;
 }
-td.solidrepublican{
+.solidrepublican{
     background-color: #fc1703;;
 }
-td.soliddemocrat{
+.soliddemocrat{
     background-color: #5493ff;
 }
-td.leandemocrat{
+.leandemocrat{
     background-color: #B0CEFF;
 }
-td.leanrepublican{
+.leanrepublican{
     background-color: #ff8a8a;
 }
-td.even{
+.even{
     background-color: #ded8d1;
 }
