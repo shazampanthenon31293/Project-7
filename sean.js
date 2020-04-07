@@ -18,6 +18,7 @@ function s1(){
     request.onreadystatechange = function () {
       if (this.readyState === 4) {
         console.log(this.responseText);
+        const s3 = this.responseText;
       }
     };
     
@@ -25,7 +26,7 @@ function s1(){
     var s1 = guid()
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
-    const body = { "ID":s1}
+    const body = s3
     const options = {
         method: "POST",
         headers,
