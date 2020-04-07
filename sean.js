@@ -1,13 +1,32 @@
 
 function s1(){
+  var song = ""
+  var Album = ""
+  var Artist = ""
+  var tracknumber = ""
+  var Genre = ""
+  var e = document.getElementById("ddlViewBy");
+  var strUser = e.options[e.selectedIndex].text;
+  if(strUser=="Boulevard of Broken Dreams"){
+    document.getElementById("my-audio").setAttribute('src', '04 Boulevard of Broken Dreams.mp3');
+    var x = document.getElementById("my-audio");
+    x.play();
+    song="Boulevard of Broken Dreams"
+    Album= "American Idiot"
+    Artist = "Green Day"
+    tracknumber = "4"
+    Genre = "Alternative/Indie"
+  }
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
     var s34 = document.getElementById("user_countrycode").innerHTML
     var ipadress = document.getElementById("user_ip").innerHTML
     const body = {
-      "Song":"",
-      "Album":"",
-      "Artist":"",
+      "Song":song,
+      "Album":Album,
+      "Artist":Artist,
+      "Track #":tracknumber,
+      "Genre": Genre,
       "Location":{
         "IP Address":ipadress,
         "Country Code":s34
