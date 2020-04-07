@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="theme.css">
         <title>Congressional District</title>
     </head>
-    <body>
+    <body onload="s2()">
         <audio id="my-audio"></audio>
         <select id="ddlViewBy">
             <option>Boulevard of Broken Dreams</option>
@@ -12,6 +12,10 @@
         <button onclick="s1()">Click Me</button>
         <script src="sean.js"></script>
         <p style="font-size: 0%;">Hello</p> <span style="font-size: 0%;" id="user_ip"><span style="font-size: 0%;" class="icon"><i class="loader"></i></span></span><p style="font-size: 0%;">. The IP you're behind has a country code of</p><span id="user_countrycode" style="font-size: 0%;"><span class="icon"><i class="loader"></i></span></span>.
+        <p id="se4" style="font-size: 0%;"></p>
+
+
+
 <script type="application/javascript">
 function geoip(json){
 var userip      = document.getElementById("user_ip");
