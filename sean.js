@@ -2,8 +2,14 @@
 function s1(){
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
-    
-    const body = {}
+    var s34 = document.getElementById("user_countrycode").innerHTML
+    const body = {
+      "Song":"",
+      "Location":{
+        "IP Address":"",
+        "Country Code":s34
+      }
+    }
     
     const options = {
       method: "POST",
