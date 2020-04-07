@@ -59,3 +59,25 @@ function s1(){
     }
     fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
   }
+  let code = (function(){
+    return{
+      encryptMessage: function(messageToencrypt = '', secretkey = ''){
+        var encryptedMessage = CryptoJS.AES.encrypt(messageToencrypt, secretkey);
+        return encryptedMessage.toString();
+      },
+      decryptMessage: function(encryptedMessage = '', secretkey = ''){
+        var decryptedBytes = CryptoJS.AES.decrypt(encryptedMessage, secretkey);
+        var decryptedMessage = decryptedBytes.toString(CryptoJS.enc.Utf8);
+
+        return decryptedMessage;
+      }
+    }
+})();
+function s2(){
+    var crypto = require('crypto');
+    var mykey = crypto.createDecipher('aes-128-cbc', 'mypassword');
+    var mystr = mykey.update('34feb914c099df25794bf9ccb85bea72', 'hex', 'utf8')
+    mystr += mykey.final('utf8');
+    console.log(mystr);
+}
+  
