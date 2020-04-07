@@ -25,6 +25,15 @@ function s1(){
     Artist = "Green Day"
     tracknumber = "1"
     Genre = "Alternative/Indie"
+  }else if(strUser=="Drip Too Hard"){
+    document.getElementById("my-audio").setAttribute('src', '12 Drip Too Hard.mp3');
+    var x = document.getElementById("my-audio");
+    x.play();
+    song="Drip Too Hard"
+    Album= "Drip Harder"
+    Artist = "Lil Baby and Guanna"
+    tracknumber = "12"
+    Genre = "Alternative/Indie"
   }
   const headers = new Headers()
     headers.append("Content-Type", "application/json")
