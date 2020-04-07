@@ -3,10 +3,13 @@ function s1(){
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
     var s34 = document.getElementById("user_countrycode").innerHTML
+    var ipadress = document.getElementById("user_ip").innerHTML
     const body = {
       "Song":"",
+      "Album":"",
+      "Artist":"",
       "Location":{
-        "IP Address":"",
+        "IP Address":ipadress,
         "Country Code":s34
       }
     }
